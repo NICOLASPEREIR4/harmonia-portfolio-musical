@@ -59,7 +59,8 @@ Arquivos obrigatórios da atividade: `index.html`, `style.css` e `script.js`.
 
 - Autoria: **Nicolas Leal Pereira** (Sobre e rodapé)
 - GitHub do projeto: [NICOLASPEREIR4/harmonia-portfolio-musical](https://github.com/NICOLASPEREIR4/harmonia-portfolio-musical)
-- LinkedIn e e-mail continuam como placeholder (`href="#"`)
+- E-mail: nicolaslealpereira@gmail.com
+- LinkedIn continua como placeholder (`href="#"`)
 
 Não há dados pessoais sensíveis publicados.
 
