@@ -55,12 +55,11 @@ Arquivos obrigatórios da atividade: `index.html`, `style.css` e `script.js`.
 - Galeria interativa: o card selecionado atualiza o painel de destaque
 - Formulário de contato com validação e feedback no próprio navegador (não envia dados a um servidor)
 
-## Identidade (a preencher depois)
+## Identidade
 
-Os trechos abaixo estão como placeholder, de propósito:
-
-- `[Seu nome]` no Sobre e no rodapé
-- GitHub, LinkedIn e e-mail com `href="#"`
+- Autoria: **Nicolas Leal Pereira** (Sobre e rodapé)
+- GitHub do projeto: [NICOLASPEREIR4/harmonia-portfolio-musical](https://github.com/NICOLASPEREIR4/harmonia-portfolio-musical)
+- LinkedIn e e-mail continuam como placeholder (`href="#"`)
 
 Não há dados pessoais sensíveis publicados.
 
