@@ -2,7 +2,10 @@
 
 Portfólio web estático sobre música, desenvolvido com **HTML5**, **CSS3** e **JavaScript** nativos. A interface é minimalista, com fundo escuro, texto claro e destaque em vermelho-laranja.
 
-O projeto segue a especificação da atividade acadêmica: página única, responsiva, com interações em JavaScript e publicação prevista no GitHub Pages (esta etapa ainda não foi feita).
+O projeto segue a especificação da atividade acadêmica: página única, responsiva, com interações em JavaScript, versionada no GitHub e publicada no GitHub Pages.
+
+- Site: https://nicolaspereir4.github.io/harmonia-portfolio-musical/
+- Repositório: https://github.com/NICOLASPEREIR4/harmonia-portfolio-musical
 
 ## Como abrir localmente
 
@@ -83,17 +86,22 @@ A primeira geração não copiou os exemplos literais do documento técnico. Aju
 - [x] Conteúdo revisado e sem dados pessoais sensíveis
 - [x] Uso de IA documentado
 - [x] Pelo menos cinco personalizações após o exemplo da spec
-- [ ] Site aberto por URL pública (GitHub Pages — etapa futura)
-- [ ] Repositório no GitHub (etapa futura)
+- [x] Site aberto por URL pública (GitHub Pages)
+- [x] Repositório no GitHub
 
-## Publicação futura no GitHub Pages
+## GitHub e GitHub Pages
 
-Quando for a hora de publicar:
+Repositório público `harmonia-portfolio-musical`, branch `main`, pasta `/ (root)`.
 
-1. Criar o repositório (por exemplo `meu-portfolio-musica`).
-2. Enviar `index.html`, `style.css`, `script.js`, `assets/` e `README.md`.
-3. Em **Settings → Pages**, escolher *Deploy from a branch*, branch `main`, pasta `/ (root)`.
-4. A URL seguirá o padrão `https://SEU_USUARIO.github.io/NOME_DO_REPOSITORIO/`.
+1. `git init` na branch `main` e commit inicial.
+2. Login no GitHub CLI (`gh auth login`).
+3. `gh repo create harmonia-portfolio-musical --public --source=. --remote=origin --push`.
+4. GitHub Pages ativado em **Settings → Pages**: *Deploy from a branch*, `main`, `/ (root)`.
+
+URLs:
+
+- https://github.com/NICOLASPEREIR4/harmonia-portfolio-musical
+- https://nicolaspereir4.github.io/harmonia-portfolio-musical/
 
 ## Registro do uso da IA
 
@@ -126,3 +134,4 @@ Quando for a hora de publicar:
 - Ícones de menu e tema via `mask-image` em SVG de traço podiam não aparecer. Correção: SVG inline nos botões, com troca por CSS/`aria-expanded`.
 - Flash de tema errado ao recarregar a página. Correção: script curto no `<head>` lendo `localStorage` antes do CSS visível.
 - Formulário sem backend. Correção: `preventDefault`, validação no cliente e aviso explícito de que nada é enviado a um servidor.
+- `*.md` estava no gitignore global da máquina, então `README.md` e a spec não iam no primeiro `git add`. Correção: `git add -f` nesses arquivos, sem alterar a config global do Git.
