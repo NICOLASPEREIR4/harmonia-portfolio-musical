@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-labelledby="t d">
+  <title id="t">Capa Ecos do Asfalto</title>
+  <desc id="d">Composição geométrica urbana em preto e vermelho-laranja.</desc>
+  <rect width="400" height="400" fill="#14100e"/>
+  <polygon points="0,400 90,180 150,400" fill="#2a1c16"/>
+  <polygon points="130,400 210,90 280,400" fill="#1c1612"/>
+  <polygon points="250,400 340,140 400,400" fill="#2a1c16"/>
+  <line x1="40" y1="400" x2="210" y2="40" stroke="#e23d12" stroke-width="6"/>
+  <line x1="210" y1="40" x2="380" y2="400" stroke="#e23d12" stroke-width="6"/>
+  <rect x="186" y="22" width="48" height="10" fill="#f4efe8"/>
+  <circle cx="210" cy="248" r="18" fill="#e23d12"/>
+</svg>

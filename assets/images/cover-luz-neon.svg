@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-labelledby="t d">
+  <title id="t">Capa Luz de Neon</title>
+  <desc id="d">Círculos concêntricos e reflexos em neon.</desc>
+  <rect width="400" height="400" fill="#120c14"/>
+  <circle cx="200" cy="200" r="150" fill="none" stroke="#e23d12" stroke-width="3" opacity="0.35"/>
+  <circle cx="200" cy="200" r="110" fill="none" stroke="#e23d12" stroke-width="8"/>
+  <circle cx="200" cy="200" r="70" fill="none" stroke="#f4efe8" stroke-width="2" opacity="0.5"/>
+  <circle cx="200" cy="200" r="28" fill="#e23d12"/>
+  <circle cx="86" cy="86" r="42" fill="none" stroke="#f4efe8" stroke-width="2" opacity="0.25"/>
+  <circle cx="320" cy="300" r="54" fill="#e23d12" opacity="0.18"/>
+</svg>

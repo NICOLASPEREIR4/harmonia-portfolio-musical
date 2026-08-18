@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-labelledby="t d">
+  <title id="t">Capa Palavra Viva</title>
+  <desc id="d">Geometria de vitral com faixas luminosas.</desc>
+  <rect width="400" height="400" fill="#14110c"/>
+  <polygon points="200,30 370,200 200,370 30,200" fill="#1c1612" stroke="#e23d12" stroke-width="4"/>
+  <polygon points="200,80 320,200 200,320 80,200" fill="#100c0a"/>
+  <line x1="200" y1="30" x2="200" y2="370" stroke="#f4efe8" stroke-width="2" opacity="0.4"/>
+  <line x1="30" y1="200" x2="370" y2="200" stroke="#f4efe8" stroke-width="2" opacity="0.4"/>
+  <circle cx="200" cy="200" r="26" fill="#e23d12"/>
+</svg>

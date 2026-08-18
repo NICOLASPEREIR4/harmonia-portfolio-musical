@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Harmonia é um portfólio web sobre música: curadoria de gêneros, artistas, playlists e notas de escuta em uma interface minimalista.">
+    <title>Harmonia — Portfólio Musical</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        (function () {
+            try {
+                var theme = localStorage.getItem("harmonia-theme");
+                if (theme === "light" || theme === "dark") {
+                    document.documentElement.setAttribute("data-theme", theme);
+                }
+            } catch (error) {
+                /* storage indisponível */
+            }
+        })();
+    </script>
+</head>
+<body>
+    <a class="skip-link" href="#conteudo-principal">Pular para o conteúdo</a>
+
+    <header class="site-header" id="topo">
+        <div class="header-inner">
+            <a class="logo" href="#inicio" aria-label="Harmonia, ir para o início">
+                <span class="logo-mark" aria-hidden="true"></span>
+                Harmonia
+            </a>
+
+            <button
+                class="menu-toggle"
+                type="button"
+                aria-expanded="false"
+                aria-controls="menu-principal"
+                id="botao-menu"
+            >
+                <svg class="icon-menu" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <line x1="4" y1="7" x2="20" y2="7"></line>
+                    <line x1="4" y1="12" x2="20" y2="12"></line>
+                    <line x1="4" y1="17" x2="20" y2="17"></line>
+                </svg>
+                <svg class="icon-close" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                </svg>
+                <span class="visually-hidden">Abrir menu</span>
+            </button>
+
+            <nav class="site-nav" id="menu-principal" aria-label="Navegação principal">
+                <ul class="nav-list">
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#musica">Música</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+
+            <button class="theme-toggle" type="button" id="botao-tema" aria-pressed="false">
+                <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M15 3a9 9 0 1 0 6 16 7 7 0 0 1-6-16z"></path>
+                </svg>
+                <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <circle cx="12" cy="12" r="4"></circle>
+                    <line x1="12" y1="2" x2="12" y2="5"></line>
+                    <line x1="12" y1="19" x2="12" y2="22"></line>
+                    <line x1="2" y1="12" x2="5" y2="12"></line>
+                    <line x1="19" y1="12" x2="22" y2="12"></line>
+                    <line x1="4.5" y1="4.5" x2="6.7" y2="6.7"></line>
+                    <line x1="17.3" y1="17.3" x2="19.5" y2="19.5"></line>
+                    <line x1="17.3" y1="6.7" x2="19.5" y2="4.5"></line>
+                    <line x1="4.5" y1="19.5" x2="6.7" y2="17.3"></line>
+                </svg>
+                <span class="theme-toggle-label">Modo claro</span>
+            </button>
+        </div>
+    </header>
+
+    <main id="conteudo-principal">
+        <section class="hero" id="inicio" aria-labelledby="titulo-hero">
+            <div class="hero-copy">
+                <p class="eyebrow">Portfólio de escuta</p>
+                <h1 id="titulo-hero">Ouvindo o que o silêncio ainda não disse</h1>
+                <p class="hero-lead">
+                    Harmonia reúne curadoria, gêneros e notas de escuta em um espaço visual
+                    seco, com preto, branco e um vermelho-laranja que marca o pulso da página.
+                </p>
+                <a class="button button-primary" href="#musica">Explorar a curadoria</a>
+            </div>
+            <figure class="hero-visual">
+                <img src="assets/images/hero-visual.svg" width="480" height="480" alt="Vinil estilizado com ondas sonoras e barras de equalizador em vermelho-laranja.">
+            </figure>
+        </section>
+
+        <section class="musica" id="musica" aria-labelledby="titulo-musica">
+            <div class="section-heading">
+                <p class="eyebrow">Acervo</p>
+                <h2 id="titulo-musica">Música e conteúdos</h2>
+                <p>Filtre por gênero e abra um card para destacá-lo no painel de escuta.</p>
+            </div>
+
+            <article class="destaque" id="painel-destaque" aria-live="polite">
+                <img
+                    class="destaque-capa"
+                    src="assets/images/cover-ecos-asfalto.svg"
+                    width="400"
+                    height="400"
+                    alt="Capa geométrica urbana da playlist Ecos do Asfalto."
+                    id="destaque-imagem"
+                >
+                <div class="destaque-info">
+                    <p class="destaque-meta">
+                        <span id="destaque-tipo">Playlist</span>
+                        ·
+                        <span id="destaque-genero">Rock</span>
+                    </p>
+                    <h3 id="destaque-titulo">Ecos do Asfalto</h3>
+                    <p class="destaque-artista" id="destaque-artista">Coletânea Harmonia</p>
+                    <p id="destaque-descricao">
+                        Guitarras secas, bateria à frente e letras que caminham pela cidade depois da meia-noite.
+                    </p>
+                    <a
+                        class="button button-secondary"
+                        id="destaque-link"
+                        href="https://www.youtube.com/results?search_query=classic+rock+playlist"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Abrir referência
+                    </a>
+                </div>
+            </article>
+
+            <div class="filtros" role="group" aria-label="Filtrar conteúdos por gênero">
+                <button class="filtro is-active" type="button" data-filtro="todos" aria-pressed="true">Todos</button>
+                <button class="filtro" type="button" data-filtro="rock" aria-pressed="false">Rock</button>
+                <button class="filtro" type="button" data-filtro="pop" aria-pressed="false">Pop</button>
+                <button class="filtro" type="button" data-filtro="gospel" aria-pressed="false">Gospel</button>
+                <button class="filtro" type="button" data-filtro="rap" aria-pressed="false">Rap</button>
+                <button class="filtro" type="button" data-filtro="outros" aria-pressed="false">Outros</button>
+            </div>
+
+            <p class="filtro-vazio" id="filtro-vazio" hidden>Nenhum conteúdo neste gênero por enquanto.</p>
+
+            <div class="cards" id="grade-cards">
+                <article
+                    class="card is-featured"
+                    data-genero="rock"
+                    data-titulo="Ecos do Asfalto"
+                    data-artista="Coletânea Harmonia"
+                    data-descricao="Guitarras secas, bateria à frente e letras que caminham pela cidade depois da meia-noite."
+                    data-tipo="Playlist"
+                    data-alt="Capa geométrica urbana da playlist Ecos do Asfalto."
+                    data-imagem="assets/images/cover-ecos-asfalto.svg"
+                    data-link="https://www.youtube.com/results?search_query=classic+rock+playlist"
+                >
+                    <img src="assets/images/cover-ecos-asfalto.svg" width="400" height="400" alt="Capa geométrica urbana da playlist Ecos do Asfalto.">
+                    <div class="card-body">
+                        <p class="card-tags"><span>Rock</span><span>Playlist</span></p>
+                        <h3>Ecos do Asfalto</h3>
+                        <p class="card-artista">Coletânea Harmonia</p>
+                        <p>Guitarras secas, bateria à frente e letras que caminham pela cidade depois da meia-noite.</p>
+                        <button class="card-action" type="button">Destacar no painel</button>
+                    </div>
+                </article>
+
+                <article
+                    class="card"
+                    data-genero="pop"
+                    data-titulo="Luz de Neon"
+                    data-artista="Notas de vitrine"
+                    data-descricao="Refrões brilhantes, produção polida e o contraste entre a pista e o fone no ônibus."
+                    data-tipo="Artigo"
+                    data-alt="Capa com círculos concêntricos em neon da nota Luz de Neon."
+                    data-imagem="assets/images/cover-luz-neon.svg"
+                    data-link="https://www.youtube.com/results?search_query=synth+pop+essentials"
+                >
+                    <img src="assets/images/cover-luz-neon.svg" width="400" height="400" alt="Capa com círculos concêntricos em neon da nota Luz de Neon.">
+                    <div class="card-body">
+                        <p class="card-tags"><span>Pop</span><span>Artigo</span></p>
+                        <h3>Luz de Neon</h3>
+                        <p class="card-artista">Notas de vitrine</p>
+                        <p>Refrões brilhantes, produção polida e o contraste entre a pista e o fone no ônibus.</p>
+                        <button class="card-action" type="button">Destacar no painel</button>
+                    </div>
+                </article>
+
+                <article
+                    class="card"
+                    data-genero="gospel"
+                    data-titulo="Cântico Aberto"
+                    data-artista="Vozes da Casa"
+                    data-descricao="Arranjos corais e piano que tratam a fé como espaço coletivo, sem pressa e sem excesso."
+                    data-tipo="Playlist"
+                    data-alt="Capa com raios de luz da playlist Cântico Aberto."
+                    data-imagem="assets/images/cover-cantico-aberto.svg"
+                    data-link="https://www.youtube.com/results?search_query=gospel+choir+piano"
+                >
+                    <img src="assets/images/cover-cantico-aberto.svg" width="400" height="400" alt="Capa com raios de luz da playlist Cântico Aberto.">
+                    <div class="card-body">
+                        <p class="card-tags"><span>Gospel</span><span>Playlist</span></p>
+                        <h3>Cântico Aberto</h3>
+                        <p class="card-artista">Vozes da Casa</p>
+                        <p>Arranjos corais e piano que tratam a fé como espaço coletivo, sem pressa e sem excesso.</p>
+                        <button class="card-action" type="button">Destacar no painel</button>
+                    </div>
+                </article>
+
+                <article
+                    class="card"
+                    data-genero="rap"
+                    data-titulo="Rima de Rua"
+                    data-artista="Arquivo de Flow"
+                    data-descricao="Versos cortados no osso, batidas secas e a cidade como cenário e personagem."
+                    data-tipo="Curadoria"
+                    data-alt="Capa em blocos geométricos da curadoria Rima de Rua."
+                    data-imagem="assets/images/cover-rima-rua.svg"
+                    data-link="https://www.youtube.com/results?search_query=boom+bap+hip+hop"
+                >
+                    <img src="assets/images/cover-rima-rua.svg" width="400" height="400" alt="Capa em blocos geométricos da curadoria Rima de Rua.">
+                    <div class="card-body">
+                        <p class="card-tags"><span>Rap</span><span>Curadoria</span></p>
+                        <h3>Rima de Rua</h3>
+                        <p class="card-artista">Arquivo de Flow</p>
+                        <p>Versos cortados no osso, batidas secas e a cidade como cenário e personagem.</p>
+                        <button class="card-action" type="button">Destacar no painel</button>
+                    </div>
+                </article>
+
+                <article
+                    class="card"
+                    data-genero="outros"
+                    data-titulo="Maré de Notas"
+                    data-artista="Sala de Bossa"
+                    data-descricao="Jazz brasileiro, violão e silêncio entre os compassos — música para ouvir perto da janela."
+                    data-tipo="Artigo"
+                    data-alt="Capa com ondas sobrepostas da nota Maré de Notas."
+                    data-imagem="assets/images/cover-mare-notas.svg"
+                    data-link="https://www.youtube.com/results?search_query=bossa+nova+jazz+brasil"
+                >
+                    <img src="assets/images/cover-mare-notas.svg" width="400" height="400" alt="Capa com ondas sobrepostas da nota Maré de Notas.">
+                    <div class="card-body">
+                        <p class="card-tags"><span>Outros</span><span>Artigo</span></p>
+                        <h3>Maré de Notas</h3>
+                        <p class="card-artista">Sala de Bossa</p>
+                        <p>Jazz brasileiro, violão e silêncio entre os compassos — música para ouvir perto da janela.</p>
+                        <button class="card-action" type="button">Destacar no painel</button>
+                    </div>
+                </article>
+
+                <article
+                    class="card"
+                    data-genero="rock"
+                    data-titulo="Pedra e Fogo"
+                    data-artista="Estúdio Norte"
+                    data-descricao="Riffs pesados e dinâmica de palco: o volume sobe, o arranjo não perde o osso."
+                    data-tipo="Produção"
+                    data-alt="Capa triangular em vermelho e preto da produção Pedra e Fogo."
+                    data-imagem="assets/images/cover-pedra-fogo.svg"
+                    data-link="https://www.youtube.com/results?search_query=hard+rock+riffs"
+                >
+                    <img src="assets/images/cover-pedra-fogo.svg" width="400" height="400" alt="Capa triangular em vermelho e preto da produção Pedra e Fogo.">
+                    <div class="card-body">
+                        <p class="card-tags"><span>Rock</span><span>Produção</span></p>
+                        <h3>Pedra e Fogo</h3>
+                        <p class="card-artista">Estúdio Norte</p>
+                        <p>Riffs pesados e dinâmica de palco: o volume sobe, o arranjo não perde o osso.</p>
+                        <button class="card-action" type="button">Destacar no painel</button>
+                    </div>
+                </article>
+
+                <article
+                    class="card"
+                    data-genero="pop"
+                    data-titulo="Coração Pop"
+                    data-artista="Pista Interna"
+                    data-descricao="Hooks curtos, baixo dançante e a repetição consciente de um refrão que cola."
+                    data-tipo="Playlist"
+                    data-alt="Capa com barras de equalizador da playlist Coração Pop."
+                    data-imagem="assets/images/cover-coracao-pop.svg"
+                    data-link="https://www.youtube.com/results?search_query=dance+pop+playlist"
+                >
+                    <img src="assets/images/cover-coracao-pop.svg" width="400" height="400" alt="Capa com barras de equalizador da playlist Coração Pop.">
+                    <div class="card-body">
+                        <p class="card-tags"><span>Pop</span><span>Playlist</span></p>
+                        <h3>Coração Pop</h3>
+                        <p class="card-artista">Pista Interna</p>
+                        <p>Hooks curtos, baixo dançante e a repetição consciente de um refrão que cola.</p>
+                        <button class="card-action" type="button">Destacar no painel</button>
+                    </div>
+                </article>
+
+                <article
+                    class="card"
+                    data-genero="gospel"
+                    data-titulo="Palavra Viva"
+                    data-artista="Harmonia Vocal"
+                    data-descricao="Harmonias abertas e um pulso lento, mais perto da conversa do que do espetáculo."
+                    data-tipo="Artigo"
+                    data-alt="Capa em geometria de vitral da nota Palavra Viva."
+                    data-imagem="assets/images/cover-palavra-viva.svg"
+                    data-link="https://www.youtube.com/results?search_query=contemporary+gospel+ballad"
+                >
+                    <img src="assets/images/cover-palavra-viva.svg" width="400" height="400" alt="Capa em geometria de vitral da nota Palavra Viva.">
+                    <div class="card-body">
+                        <p class="card-tags"><span>Gospel</span><span>Artigo</span></p>
+                        <h3>Palavra Viva</h3>
+                        <p class="card-artista">Harmonia Vocal</p>
+                        <p>Harmonias abertas e um pulso lento, mais perto da conversa do que do espetáculo.</p>
+                        <button class="card-action" type="button">Destacar no painel</button>
+                    </div>
+                </article>
+
+                <article
+                    class="card"
+                    data-genero="rap"
+                    data-titulo="Flow Noturno"
+                    data-artista="Fita Cassete"
+                    data-descricao="Boom bap, microfone próximo e narrativas que avançam no escuro da madrugada."
+                    data-tipo="Playlist"
+                    data-alt="Capa com microfone abstrato da playlist Flow Noturno."
+                    data-imagem="assets/images/cover-flow-noturno.svg"
+                    data-link="https://www.youtube.com/results?search_query=lofi+boom+bap+hiphop"
+                >
+                    <img src="assets/images/cover-flow-noturno.svg" width="400" height="400" alt="Capa com microfone abstrato da playlist Flow Noturno.">
+                    <div class="card-body">
+                        <p class="card-tags"><span>Rap</span><span>Playlist</span></p>
+                        <h3>Flow Noturno</h3>
+                        <p class="card-artista">Fita Cassete</p>
+                        <p>Boom bap, microfone próximo e narrativas que avançam no escuro da madrugada.</p>
+                        <button class="card-action" type="button">Destacar no painel</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="sobre" id="sobre" aria-labelledby="titulo-sobre">
+            <div class="section-heading">
+                <p class="eyebrow">Proposta</p>
+                <h2 id="titulo-sobre">Sobre este portfólio</h2>
+            </div>
+            <div class="sobre-grid">
+                <article>
+                    <h3>Um espaço de escuta, não de ranking</h3>
+                    <p>
+                        Harmonia nasceu como exercício de front-end e como caderno público de música.
+                        A página reúne gêneros que convivem no mesmo fone — rock seco, pop de vitrine,
+                        gospel coral, rap de rua e jazz brasileiro — sem pretender esgotar nenhum deles.
+                    </p>
+                    <p>
+                        O interesse aqui é de curadoria: o que uma faixa faz no corpo, como um arranjo
+                        respira, e por que certos timbres voltam. Os textos são notas de escuta, não biografias.
+                    </p>
+                </article>
+                <article>
+                    <h3>Autoria</h3>
+                    <p>
+                        Projeto desenvolvido por <strong>[Seu nome]</strong> como portfólio acadêmico
+                        de HTML, CSS e JavaScript, com identidade visual própria e publicação prevista
+                        em página estática.
+                    </p>
+                    <ul class="sobre-lista">
+                        <li>HTML5 semântico</li>
+                        <li>CSS com variáveis, Grid e Flexbox</li>
+                        <li>JavaScript para filtro, tema e galeria</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section class="contato" id="contato" aria-labelledby="titulo-contato">
+            <div class="section-heading">
+                <p class="eyebrow">Fale comigo</p>
+                <h2 id="titulo-contato">Contato</h2>
+                <p>Links públicos e um formulário visual. Nenhum dado é enviado a um servidor.</p>
+            </div>
+
+            <div class="contato-grid">
+                <ul class="contato-links">
+                    <li>
+                        <a href="#" aria-label="GitHub — substituir pelo perfil público">
+                            <img src="assets/icons/icon-github.svg" width="24" height="24" alt="">
+                            GitHub
+                            <span class="contato-hint">[seu-usuario]</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" aria-label="LinkedIn — substituir pelo perfil público">
+                            <img src="assets/icons/icon-linkedin.svg" width="24" height="24" alt="">
+                            LinkedIn
+                            <span class="contato-hint">[seu-perfil]</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" aria-label="E-mail profissional — substituir pelo endereço público">
+                            <img src="assets/icons/icon-mail.svg" width="24" height="24" alt="">
+                            E-mail
+                            <span class="contato-hint">[seu e-mail]</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <form class="contato-form" id="form-contato" novalidate>
+                    <div class="campo">
+                        <label for="nome">Nome</label>
+                        <input type="text" id="nome" name="nome" autocomplete="name" required minlength="2">
+                    </div>
+                    <div class="campo">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" autocomplete="email" required>
+                    </div>
+                    <div class="campo">
+                        <label for="mensagem">Mensagem</label>
+                        <textarea id="mensagem" name="mensagem" rows="5" required minlength="10"></textarea>
+                    </div>
+                    <p class="form-status" id="form-status" role="status" hidden></p>
+                    <button class="button button-primary" type="submit">Enviar mensagem</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <p><strong>Harmonia</strong> — portfólio musical · 2026</p>
+            <p>Autoria: [Seu nome]</p>
+            <nav aria-label="Rodapé">
+                <a href="#inicio">Início</a>
+                <a href="#musica">Música</a>
+                <a href="#sobre">Sobre</a>
+                <a href="#contato">Contato</a>
+            </nav>
+        </div>
+    </footer>
+
+    <button class="voltar-topo" type="button" id="voltar-topo" hidden>
+        <img src="assets/icons/icon-arrow-up.svg" width="20" height="20" alt="">
+        Voltar ao topo
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>

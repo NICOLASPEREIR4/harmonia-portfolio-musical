@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-labelledby="t d">
+  <title id="t">Capa Coração Pop</title>
+  <desc id="d">Barras de equalizador e arco de destaque.</desc>
+  <rect width="400" height="400" fill="#1a1014"/>
+  <rect x="70" y="210" width="28" height="120" rx="6" fill="#f4efe8" opacity="0.35"/>
+  <rect x="114" y="150" width="28" height="180" rx="6" fill="#e23d12"/>
+  <rect x="158" y="90" width="28" height="240" rx="6" fill="#f4efe8"/>
+  <rect x="202" y="130" width="28" height="200" rx="6" fill="#e23d12" opacity="0.75"/>
+  <rect x="246" y="180" width="28" height="150" rx="6" fill="#f4efe8" opacity="0.55"/>
+  <rect x="290" y="230" width="28" height="100" rx="6" fill="#e23d12"/>
+  <path d="M40 80 Q 200 10, 360 80" fill="none" stroke="#e23d12" stroke-width="10" stroke-linecap="round"/>
+</svg>
