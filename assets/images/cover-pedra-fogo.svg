@@ -1,6 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-labelledby="t d">
-  <title id="t">Capa Pedra e Fogo</title>
-  <desc id="d">Formas angulares que sugerem pedra e chama.</desc>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400">
   <rect width="400" height="400" fill="#120e0c"/>
   <polygon points="200,36 360,360 40,360" fill="#1c1612" stroke="#3a2e26" stroke-width="2"/>
   <polygon points="200,90 300,330 100,330" fill="#e23d12"/>

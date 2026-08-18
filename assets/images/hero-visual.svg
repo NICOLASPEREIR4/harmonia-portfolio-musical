@@ -1,6 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" role="img" aria-labelledby="heroTitle heroDesc">
-  <title id="heroTitle">Disco e ondas sonoras</title>
-  <desc id="heroDesc">Ilustração original de um vinil com ondas sonoras em vermelho-laranja.</desc>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="480" viewBox="0 0 480 480">
   <rect width="480" height="480" fill="#1c1612"/>
   <circle cx="240" cy="240" r="188" fill="#100c0a" stroke="#3a2e26" stroke-width="2"/>
   <circle cx="240" cy="240" r="168" fill="none" stroke="#2a211c" stroke-width="1.5"/>

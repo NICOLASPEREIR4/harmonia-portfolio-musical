@@ -1,6 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-labelledby="t d">
-  <title id="t">Capa Coração Pop</title>
-  <desc id="d">Barras de equalizador e arco de destaque.</desc>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400">
   <rect width="400" height="400" fill="#1a1014"/>
   <rect x="70" y="210" width="28" height="120" rx="6" fill="#f4efe8" opacity="0.35"/>
   <rect x="114" y="150" width="28" height="180" rx="6" fill="#e23d12"/>

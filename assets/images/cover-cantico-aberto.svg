@@ -1,6 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-labelledby="t d">
-  <title id="t">Capa Cântico Aberto</title>
-  <desc id="d">Raios de luz partindo do centro sobre fundo escuro.</desc>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400">
   <rect width="400" height="400" fill="#16120c"/>
   <g stroke="#e23d12" stroke-width="3" stroke-linecap="round">
     <line x1="200" y1="200" x2="200" y2="24"/>

@@ -531,12 +531,10 @@ p {
 
 .contato-links img {
     grid-row: span 2;
-    filter: invert(1);
 }
 
-[data-theme="light"] .contato-links img,
-[data-theme="light"] .voltar-topo img {
-    filter: none;
+[data-theme="light"] .contato-links img {
+    filter: invert(1);
 }
 
 .contato-hint {
@@ -639,7 +637,7 @@ p {
 }
 
 .voltar-topo img {
-    filter: invert(1);
+    display: block;
 }
 
 .voltar-topo[hidden] {
